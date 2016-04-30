@@ -12,6 +12,9 @@ import Definer from '../definer';
 import ChatsCtrl from '../controllers/chats.controller';
 import ChatCtrl from '../controllers/chat.controller';
 import DiscoverCtrl from '../controllers/discover.controller';
+import DiscoverTodayCtrl from '../controllers/discover.today.controller';
+import DiscoverTomorrowCtrl from '../controllers/discover.tomorrow.controller';
+import DiscoverUpcomingCtrl from '../controllers/discover.upcoming.controller';
 import WistlistCtrl from '../controllers/wishlist.controller';
 import TicketCtrl from '../controllers/ticket.controller';
 import ProfileCtrl from '../controllers/profile.controller';
@@ -30,6 +33,9 @@ new Definer(App)
   .define(ChatsCtrl)
   .define(ChatCtrl)
   .define(DiscoverCtrl)
+  .define(DiscoverTodayCtrl)
+  .define(DiscoverTomorrowCtrl)
+  .define(DiscoverUpcomingCtrl)
   .define(WistlistCtrl)
   .define(TicketCtrl)
   .define(ProfileCtrl)
