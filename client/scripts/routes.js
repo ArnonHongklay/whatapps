@@ -12,35 +12,8 @@ export default class RoutesConfig extends Config {
         url: '/discover',
         views: {
           'tab-discover': {
-            templateUrl: 'client/templates/discover.html',
+            templateUrl: 'client/views/discover.html',
             controller: 'DiscoverCtrl as discover'
-          }
-        }
-      })
-      .state('tab.discover.today', {
-        url: '/today',
-        views: {
-          'tab-discover-today': {
-            templateUrl: 'client/templates/discover-today.html',
-            controller: 'DiscoverTodayCtrl as discover'
-          }
-        }
-      })
-      .state('tab.discover.tomorrow', {
-        url: '/tomorrow',
-        views: {
-          'tab-discover-tomorrow': {
-            templateUrl: 'client/templates/discover-tomorrow.html',
-            controller: 'DiscoverTomorrowCtrl as discover'
-          }
-        }
-      })
-      .state('tab.discover.upcoming', {
-        url: '/upcoming',
-        views: {
-          'tab-discover-upcoming': {
-            templateUrl: 'client/templates/discover-upcoming.html',
-            controller: 'DiscoverUpcomingCtrl as discover'
           }
         }
       })
@@ -48,7 +21,7 @@ export default class RoutesConfig extends Config {
         url: '/wishlist',
         views: {
           'tab-wishlist': {
-            templateUrl: 'client/templates/wishlist.html',
+            templateUrl: 'client/views/wishlist.html',
             controller: 'WishlistCtrl as wishlist'
           }
         }
@@ -57,7 +30,7 @@ export default class RoutesConfig extends Config {
         url: '/ticket',
         views: {
           'tab-ticket': {
-            templateUrl: 'client/templates/ticket.html',
+            templateUrl: 'client/views/ticket.html',
             controller: 'TicketCtrl as ticket'
           }
         }
@@ -66,7 +39,7 @@ export default class RoutesConfig extends Config {
         url: '/profile',
         views: {
           'tab-profile': {
-            templateUrl: 'client/templates/profile.html',
+            templateUrl: 'client/views/profile.html',
             controller: 'ProfileCtrl as profile'
           }
         }
