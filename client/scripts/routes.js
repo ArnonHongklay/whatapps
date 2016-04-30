@@ -8,26 +8,62 @@ export default class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'client/templates/tabs.html'
       })
-      .state('tab.chats', {
-        url: '/chats',
+      .state('tab.discover', {
+        url: '/discover',
         views: {
-          'tab-chats': {
-            templateUrl: 'client/templates/chats.html',
-            controller: 'ChatsCtrl as chats'
+          'tab-discover': {
+            templateUrl: 'client/templates/discover.html',
+            controller: 'DiscoverCtrl as discover'
           }
         }
       })
-      .state('tab.chat', {
-        url: '/chats/:chatId',
+      .state('tab.wishlist', {
+        url: '/wishlist',
         views: {
-          'tab-chats': {
-            templateUrl: 'client/templates/chat.html',
-            controller: 'ChatCtrl as chat'
+          'tab-wishlist': {
+            templateUrl: 'client/templates/wishlist.html',
+            controller: 'WishlistCtrl as wishlist'
+          }
+        }
+      })
+      .state('tab.ticket', {
+        url: '/ticket',
+        views: {
+          'tab-ticket': {
+            templateUrl: 'client/templates/ticket.html',
+            controller: 'TicketCtrl as ticket'
+          }
+        }
+      })
+      .state('tab.profile', {
+        url: '/profile',
+        views: {
+          'tab-profile': {
+            templateUrl: 'client/templates/profile.html',
+            controller: 'ProfileCtrl as profile'
           }
         }
       });
+      // .state('tab.chats', {
+      //   url: '/chats',
+      //   views: {
+      //     'tab-chats': {
+      //       templateUrl: 'client/templates/chats.html',
+      //       controller: 'ChatsCtrl as chats'
+      //     }
+      //   }
+      // })
+      // .state('tab.chat', {
+      //   url: '/chats/:chatId',
+      //   views: {
+      //     'tab-chats': {
+      //       templateUrl: 'client/templates/chat.html',
+      //       controller: 'ChatCtrl as chat'
+      //     }
+      //   }
+      // });
 
-    this.$urlRouterProvider.otherwise('tab/chats');
+    this.$urlRouterProvider.otherwise('tab/discover');
   }
 }
 
