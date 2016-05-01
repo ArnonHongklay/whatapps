@@ -1,7 +1,10 @@
-<!--
-<ion-view view-title="Discover">
-  <ion-content>
-    <ion-tabs class="tabs-striped tabs-top tabs-background-positive tabs-background-dark tabs-color-light">
+
+<ion-view title="Discover">
+  <ion-nav-buttons side="right">
+  <!--   <button class="button button-clear"><img class="header-picture" ng-src="{{ chat.data.picture }}"></button> -->
+  </ion-nav-buttons>
+
+     <ion-tabs class="tabs-striped tabs-top tabs-background-positive tabs-background-dark tabs-color-light">
       <ion-tab title="Today" href="#/tab/discover/today">
         <ion-nav-view name="tab-discover-today"></ion-nav-view>
       </ion-tab>
@@ -12,11 +15,42 @@
         <ion-nav-view name="tab-discover-upcoming"></ion-nav-view>
       </ion-tab>
     </ion-tabs>
-  </ion-content>
-</ion-view> -->
 
-<ion-view title="Discover">
-  <ion-content>
-    <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
-  </ion-content>
+  <ion-content class="chat" delegate-handle="chatScroll">
+<!--     <div class="message-list">
+      <div ng-repeat="message in chat.messages" class="message-wrapper">
+        <div class="message" ng-class-even="'message-mine'" ng-class-odd="'message-other'">
+          <div class="message-text">{{ message.text }}</div>
+          <span class="message-timestamp">{{ message.timestamp | amDateFormat: 'HH:MM' }}</span>
+        </div>
+      </div>
+    </div>
+ -->
+      <div class="discover today">
+      xxxx<i class="icon ion-home"></i>
+
+      </div>
+    </ion-content>
+    <!-- <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
+    <button class="button button-clear button-icon button-positive icon ion-ios-upload-outline"></button>
+
+    <label class="item-input-wrapper">
+      <input
+        ng-model="chat.message"
+        dir="auto"
+        type="text"
+        on-return="chat.sendMessage(); chat.closeKeyboard()"
+        on-focus="chat.inputUp()"
+        on-blur="chat.inputDown()"/>
+    </label>
+
+    <span ng-if="chat.message.length > 0">
+      <button ng-click="chat.sendMessage()" class="button button-clear button-positive">Send</button>
+    </span>
+    <span ng-if="!chat.message || chat.message.length === 0">
+      <button class="button button-clear button-icon button-positive icon ion-ios-camera-outline"></button>
+      <i class="buttons-seperator icon ion-android-more-vertical"></i>
+      <button class="button button-clear button-icon button-positive icon ion-ios-mic-outline"></button>
+    </span>
+  </ion-footer-bar> -->
 </ion-view>

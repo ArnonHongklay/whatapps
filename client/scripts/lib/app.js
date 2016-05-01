@@ -9,12 +9,17 @@ import 'ionic-scripts';
 
 // Modules
 import Definer from '../definer';
-import ChatsCtrl from '../controllers/chats.controller';
-import ChatCtrl from '../controllers/chat.controller';
 import DiscoverCtrl from '../controllers/discover.controller';
 import WistlistCtrl from '../controllers/wishlist.controller';
+
 import TicketCtrl from '../controllers/ticket.controller';
+import TicketItemCtrl from '../controllers/ticket.item.controller'
+
 import ProfileCtrl from '../controllers/profile.controller';
+
+import ChatsCtrl from '../controllers/chats.controller';
+import ChatCtrl from '../controllers/chat.controller';
+
 import InputDirective from '../directives/input.directive';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
@@ -27,12 +32,13 @@ const App = angular.module('Whatsapp', [
 ]);
 
 new Definer(App)
-  .define(ChatsCtrl)
-  .define(ChatCtrl)
   .define(DiscoverCtrl)
   .define(WistlistCtrl)
   .define(TicketCtrl)
+  .define(TicketItemCtrl)
   .define(ProfileCtrl)
+  .define(ChatsCtrl)
+  .define(ChatCtrl)
   .define(InputDirective)
   .define(CalendarFilter)
   .define(RoutesConfig);

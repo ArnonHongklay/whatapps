@@ -1,0 +1,11 @@
+
+
+div.ticket-where.item-icon-left,
+div.ticket-timestamp.item-icon-left {
+  position: relative;
+  padding-left: 30px;
+  .icon {
+    font-size: 16px;
+    left: 0;
+  }
+}

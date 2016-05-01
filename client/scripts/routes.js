@@ -35,6 +35,14 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('tab.ticketItem', {
+        url: '/item',
+        views: {
+          'tab-ticket': {
+            templateUrl: 'client/views/ticket-item.html'
+          }
+        }
+      })
       .state('tab.profile', {
         url: '/profile',
         views: {

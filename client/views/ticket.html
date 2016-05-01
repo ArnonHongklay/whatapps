@@ -1,3 +1,4 @@
+<!--
 <ion-view view-title="Ticket">
   <ion-content>
     <ion-list>
@@ -7,16 +8,50 @@
         type="item-text-wrap"
         href="#/tab/ticket/{{ tk._id }}">
 
-
         <h2>{{ tk.name }}</h2>
         <span class="last-message-timestamp">{{ tk.lastMessage.timestamp | calendar }}</span>
         <p>{{ tk.lastMessage.text }}</p>
 
         <i class="icon ion-chevron-right icon-accessory"></i>
-        <ion-option-button class="button-assertive" ng-click="chats.remove(tk)">
+        <ion-option-button class="button-assertive" ng-click="ticket.remove(tk)">
           Delete
         </ion-option-button>
       </ion-item>
     </ion-list>
+  </ion-content>
+</ion-view>
+ -->
+
+
+ <ion-view title="Ticket">
+  <ion-content>
+    <ion-list>
+      <ion-item
+        ng-repeat="tk in ticket.data"
+        class="item-tk item-remove-animate item-icon-right"
+        type="item-text-wrap"
+        href="#/tab/item">
+
+<!--         <h2>{{ tk.name }}</h2>
+        <span class="last-message-timestamp">{{ tk.lastMessage.timestamp | calendar }}</span>
+        <p>{{ tk.lastMessage.text }}</p>
+ -->
+        <div class="ticket-text">{{ tk.name }}</div>
+        <div class="ticket-timestamp item-icon-left">
+          <span class="icon ion-clock"></span>
+          {{ tk.timestamp | amDateFormat: 'HH:MM' }}
+        </div>
+        <div class="ticket-where item-icon-left">
+          <span class="icon ion-location"></span>
+          {{ tk.where }}
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="ticket.remove(tk)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 </ion-view>

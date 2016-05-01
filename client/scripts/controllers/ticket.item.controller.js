@@ -1,11 +1,19 @@
-import moment from 'moment';
+import ionic from 'ionic-scripts';
 import { Controller } from '../entities';
 
-export default class TicketCtrl extends Controller {
+export default class TicketItemCtrl extends Controller {
   constructor() {
     super(...arguments);
 
-    this.data = [
+    this.tkId = this.$stateParams.tkId;
+
+    this.helpers({
+      data() {
+        return this.mockup.findOne(this.tkId);
+      }
+    });
+
+    this.mockup = [
       {
         _id: 0,
         name: 'Ethan Gonzalez',
@@ -31,11 +39,19 @@ export default class TicketCtrl extends Controller {
         where: 'ทองหล่อ, กรุงเทพ'
       }
     ];
-
-    // remove(tkz) {
-    //   this.data.splice(this.data.indexOf(tkz), 1);
-    // }
   }
+
+  slideChanged(index) {
+    $scope.slideIndex = index;
+  }
+
+  // next() {
+  //   $ionicSlideBoxDelegate.next();
+  // }
+
+  // previous() {
+  //   $ionicSlideBoxDelegate.next()
+  // }
 }
 
-TicketCtrl.$inject = ['$scope'];
+TicketItemCtrl.$inject = ['$scope', '$stateParams', '$ionicSlideBoxDelegate'];
