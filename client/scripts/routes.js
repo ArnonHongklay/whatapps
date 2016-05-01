@@ -17,6 +17,35 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('tab.discover.today', {
+        url: '/today',
+        views: {
+          'tab-discover-today': {
+            templateUrl: 'client/views/discover-today.html',
+            controller: 'DiscoverTodayCtrl as discover'
+          }
+        }
+      })
+
+      .state('tab.discover.tomorrow', {
+        url: '/tomorrow',
+        views: {
+          'tab-discover-tomorrow': {
+            templateUrl: 'client/views/discover-tomorrow.html',
+            controller: 'DiscoverTomorrowCtrl as discover'
+          }
+        }
+      })
+
+      .state('tab.discover.upcoming', {
+        url: '/upcoming',
+        views: {
+          'tab-discover-upcoming': {
+            templateUrl: 'client/views/discover-upcoming.html',
+            controller: 'DiscoverUpcomingCtrl as discover'
+          }
+        }
+      })
       .state('tab.wishlist', {
         url: '/wishlist',
         views: {

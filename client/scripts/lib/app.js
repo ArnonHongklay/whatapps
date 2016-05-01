@@ -10,6 +10,10 @@ import 'ionic-scripts';
 // Modules
 import Definer from '../definer';
 import DiscoverCtrl from '../controllers/discover.controller';
+import DiscoverTodayCtrl from '../controllers/discover.today.controller';
+import DiscoverTomorrowCtrl from '../controllers/discover.tomorrow.controller';
+import DiscoverUpcomingCtrl from '../controllers/discover.upcoming.controller';
+
 import WistlistCtrl from '../controllers/wishlist.controller';
 
 import TicketCtrl from '../controllers/ticket.controller';
@@ -33,6 +37,9 @@ const App = angular.module('Whatsapp', [
 
 new Definer(App)
   .define(DiscoverCtrl)
+  .define(DiscoverTodayCtrl)
+  .define(DiscoverTomorrowCtrl)
+  .define(DiscoverUpcomingCtrl)
   .define(WistlistCtrl)
   .define(TicketCtrl)
   .define(TicketItemCtrl)
